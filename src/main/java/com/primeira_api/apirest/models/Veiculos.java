@@ -6,6 +6,8 @@ package com.primeira_api.apirest.models;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -22,7 +24,15 @@ public class Veiculos implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	private int id;
+	private long id;
+	public long getId() {
+		return id;
+	}
+	/*public long setId(long id) {
+		return this.id = id;
+	}*/
+	
+	
 	private String cor,fabricante,nome;
 	public String getCor() {
 		return cor;
